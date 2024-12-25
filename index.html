@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+             <h1>Portfolio</h1>
+             <nav class="header__nav">
+                <ul>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+             </nav>
+        </div>
+    </header>
+
+    <main>
+         <section class="hero">
+             <div class="hero__inner">
+                 <h2 class="hero__title">
+                    <span class="hero__title--main">Front-end Engineer / Coder</span>
+                    <span class="hero__title--sub">SCSSを用いた高度なスタイリングと、アクセシビリティに配慮したコーディングを得意としています。</span>
+                 </h2>
+                 <p class="hero__name">山本　勇志</p>
+                 <a class="hero__email">Yamamoto Yushi</a>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="skills__inner">
+                <h2>Skills</h2>
+                 <ul class="skills__list">
+                     <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1"/>
+                         <p>HTML</p>
+                     </li>
+                     <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/color/96/css3.png" alt="css3"/>
+                         <p>CSS</p>
+                     </li>
+                     <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png" alt="javascript--v1"/>
+                        <p>JavaScript</p>
+                     </li>
+                     <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/nolan/96/php--v2.png" alt="php--v2"/>
+                      <p>PHP</p>
+                     </li>
+                     <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/color/96/wordpress.png" alt="wordpress"/>                        <p>Wordpress</p>
+                     </li>
+                     <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/color/96/react-native.png" alt="react-native"/>
+                        <p>React</p>
+                     </li>
+                    <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/color/96/vue-js.png" alt="vue-js"/>
+                        <p>Vue.js</p>
+                    </li>
+                    <li class="skills__item">
+                      <img width="48" height="48" src="https://img.icons8.com/color/48/nuxt-jc.png" alt="nuxt-jc"/>
+                      <p>Nuxt.js</p>
+                    </li>
+                    <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/fluency/96/node-js.png" alt="node-js"/>
+                        <p>Node.js</p>
+                    </li>
+                    <li class="skills__item">
+                      <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker"/>
+                        <p>Docker</p>
+                    </li>
+                 </ul>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="portfolio__inner">
+                <h2>Portfolio</h2>
+                  <div class="swiper portfolio__swiper">
+                      <div class="swiper-wrapper">
+                           <div class="swiper-slide portfolio__item">
+                                <img src="./img/prodouga.png" alt="動画プロモーションサイト" class="portfolio__img">
+                                <p class="portfolio__name">ブランディングに特化した企業サイト制作</p>
+                                <p class="portfolio__description">企業のブランドイメージを向上させるためのウェブサイトを制作。デザインだけでなく、ユーザビリティにも考慮しました。</p>
+                            </div>
+                           <div class="swiper-slide portfolio__item">
+                              <img src="./img/aibot.png" alt="AIチャットボット管理システム" class="portfolio__img">
+                              <p class="portfolio__name">LIBOTのマニュアルサイト構築事例</p>
+                              <p class="portfolio__description">AIチャットボット「LIBOT」のマニュアルサイトを構築。ユーザーが簡単に情報を検索できるように設計しました。</p>
+                           </div>
+                            <div class="swiper-slide portfolio__item">
+                                <img src="./img/freelance.png" alt="業務効率化ツール" class="portfolio__img">
+                                <p class="portfolio__name">プログラミング教室サイト制作事例</p>
+                                <p class="portfolio__description">プログラミング教室のウェブサイトを制作。教材管理、予約機能、スマホ対応レスポンシブデザインを実装しました。</p>
+                            </div>
+                            <div class="swiper-slide portfolio__item">
+                                <img src="./img/dummy5.png" alt="ダミープロジェクト4" class="portfolio__img">
+                                <p class="portfolio__name">ヘルスケア関連WebアプリのUI/UX改善</p>
+                                <p class="portfolio__description">ヘルスケア関連のウェブアプリケーションのUI/UX改善を行いました。ユーザーにとって使いやすいインターフェースを設計しました。</p>
+                            </div>
+                            <div class="swiper-slide portfolio__item">
+                                <img src="./img/dummy4.png" alt="ダミープロジェクト5" class="portfolio__img">
+                                <p class="portfolio__name">マーケティング施策と連動したUI改善</p>
+                                 <p class="portfolio__description">マーケティング施策と連動したUI改善を行いました。ユーザーの行動分析に基づき、コンバージョン率の向上を目指しました。</p>
+                             </div>
+                           <div class="swiper-slide portfolio__item">
+                               <img src="./img/dummy6.png" alt="ダミープロジェクト6" class="portfolio__img">
+                               <p class="portfolio__name">データ駆動型UI改善</p>
+                               <p class="portfolio__description">データ分析に基づいたウェブサイトのUI改善を実施。ユーザーテストを繰り返して、最適なデザインを追求しました。</p>
+                            </div>
+                        </div>
+                      <!-- If we need pagination -->
+                      <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                 </div>
+            </div>
+        </section>
+
+         <section id="contact" class="contact">
+            <div class="contact__inner">
+                <h2>Contact</h2>
+                <p>お気軽にお問い合わせください。</p>
+                <form
+                class="contact__form"
+                 action="https://docs.google.com/forms/d/e/1FAIpQLSfkFFYE3yg0qeeJBMLOsAtTwIgpUUKBhmurYvGGtyzYzhhpOg/formResponse"
+                 method="post"
+                 target="_self"
+              >
+              <div class="contact__form-group">
+                    <label for="name">Name:</label>
+                     <input type="text" id="name" name="entry.901089898" required />
+              </div>
+                <div class="contact__form-group">
+                    <label for="email">Email:</label>
+                     <input type="email" id="email" name="entry.1050091942" required />
+                 </div>
+               <div class="contact__form-group">
+                     <label for="message">Message:</label>
+                      <textarea id="message" name="entry.1423970631" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="contact__button">Send</button>
+            </form>
+                 <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted) {alert('お問い合わせが送信されました。'); submitted = false;}"></iframe>
+                <ul class="contact__sns">
+                   <li>
+                      <a href="https://github.com/YushiYamamoto" target="_blank" rel="noopener noreferrer">GitHub</a>
+                   </li>
+                   <li>
+                      <a href="https://codepen.io/yamamotoyushi" target="_blank" rel="noopener noreferrer">CodePen</a>
+                   </li>
+                </ul>
+             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Yushi Yamamoto. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
