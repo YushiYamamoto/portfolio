@@ -51,7 +51,7 @@
 
 *   ポートフォリオサイトは、GitHub Pagesで公開されており、以下のURLでアクセスできます。
 
-   [ここにGitHub PagesのURLを記述]
+   [[ポートフォリオ](https://yushi-yamamoto-portfolio.netlify.app/)]
 
 *   ポートフォリオセクションでは、過去のプロジェクトをスライダー形式で閲覧できます。
 
