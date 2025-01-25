@@ -372,3 +372,43 @@ main {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+  /* タイプライターアニメーション */
+  .hero__title--main {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hero__title--main::after {
+    content: "|";
+    position: absolute;
+    right: -0.3em;
+    animation: blink 0.8s infinite step-end;
+    color: #333; /* カーソルの色 */
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    50% { opacity: 0 }
+  }
+
+  /* 新しいタイプライターアニメーション用スタイル */
+  .typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    border-right: 2px solid transparent; /* カーソルのベース */
+  }
+
+  .typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: #333;
+    animation: blink 0.8s infinite step-end;
+    margin-left: 2px;
+  }

@@ -33,4 +33,52 @@ document.addEventListener('DOMContentLoaded', function() {
        }
   });
  
-});
+
+// script.jsに追加
+    const titleElement = document.querySelector('.hero__title--main');
+    const originalText = titleElement.textContent;
+    const speed = 50; // タイピング速度（ms）
+    const pause = 3333; // 停止時間（ms）
+  
+    // 既存のテキストを分解
+    titleElement.innerHTML = `
+      <span class="typewriter-text"></span>
+      <span class="typewriter-cursor"></span>
+    `;
+  
+    const textElement = titleElement.querySelector('.typewriter-text');
+    const cursorElement = titleElement.querySelector('.typewriter-cursor');
+  
+    let isDeleting = false;
+    let index = 0;
+  
+    function animate() {
+      const currentText = textElement.textContent;
+      const targetText = originalText;
+  
+      if (!isDeleting) {
+        // タイピングモード
+        textElement.textContent = targetText.slice(0, index + 1);
+        index++;
+  
+        if (index === targetText.length) {
+          isDeleting = true;
+          setTimeout(animate, pause);
+          return;
+        }
+      } else {
+        // 削除モード
+        textElement.textContent = currentText.slice(0, -1);
+        index--;
+  
+        if (index === 0) {
+          isDeleting = false;
+        }
+      }
+  
+      setTimeout(animate, isDeleting ? speed / 2 : speed);
+    }
+  
+    // アニメーション開始
+    animate();
+  });
