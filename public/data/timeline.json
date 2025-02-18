@@ -1,0 +1,37 @@
+[
+    {
+      "title": "業務委託エンジニア",
+      "company": "ファストドクター株式会社",
+      "tasks": "医療現場のデジタル改革に取り組むとともに、システムの信頼性とユーザー体験の向上に大きく寄与しました。",
+      "tags": ["Next.js", "Typescript", "Retool", "Redash", "Heroku"],
+      "year": 2025
+    },
+    {
+      "title": "業務委託エンジニア",
+      "company": "株式会社AIBOT",
+      "tasks": "先端技術を用い、クライアントのDX推進やWEBサービスの品質向上に貢献。柔軟な働き方と高い技術力で、効率的なシステム開発とユーザー体験の最適化を実現しました。",
+      "tags": ["Vue.js", "Typescript", "Tailwind CSS", "Vitepress", "Laravel"],
+      "year": 2024
+    },
+    {
+      "title": "動画クリエイター",
+      "company": "株式会社F学",
+      "tasks": "映像制作により、ブランドのメッセージを効果的に伝えるクリエイティブなコンテンツを制作し、視覚表現の革新を図りました。",
+      "tags": ["Final cut pro", "Photoshop", "Illustrator", "Canva", "AI"],
+      "year": 2023
+    },
+    {
+      "title": "CEO",
+      "company": "株式会社プロドウガ",
+      "tasks": "最新の技術を活用しながら、革新的なサービスの立ち上げや組織のデジタルトランスフォーメーションに取り組み、経営と技術の両面から事業の成長を実現しました。",
+      "tags": ["Nuxt.js", "SQL", "Astro", "Docker", "GAS"],
+      "year": 2022
+    },
+    {
+      "title": "WEB制作エンジニア",
+      "company": "フリーランス",
+      "tasks": "基本的なWEB技術を駆使し、ユーザー視点に立ったサイト構築とクライアントのニーズに応えるデジタルソリューションの提供に注力しました。",
+      "tags": ["HTML", "CSS", "JavaScript", "Visual Studio Code"],
+      "year": 2021
+    }
+]  

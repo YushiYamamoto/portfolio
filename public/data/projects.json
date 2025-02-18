@@ -1,0 +1,58 @@
+[
+    {
+        "title": "企業サイト制作",
+        "image": "/images/1.webp",
+        "link": "https://www.prodouga.com",
+        "tags": ["Astro", "TypeScript",  "GitHub", "Styled Components", "Vercel"],
+        "text": "企業のブランドイメージを向上させるためのウェブサイトを制作。デザインだけでなく、ユーザビリティにも考慮しました。"
+    },
+    {
+        "title": "システムのマニュアルサイト構築",
+        "image": "/images/2.webp",
+        "link": "https://qiita.com/YushiYamamoto/items/d4bc6b08be2e9979112a",
+        "tags": ["Vue.js", "Vitepress", "TypeScript", "Tailwind CSS", "Docker"],
+        "text": "LINE集客システムのマニュアルサイトを構築。ユーザーが簡単に情報を検索できるように設計しました。"
+    },
+    {
+        "title": "プログラミング教室サイト制作",
+        "image": "/images/3.webp",
+        "link": "https://qiita.com/YushiYamamoto/items/9489a9f305b89ce77b0a",
+        "tags": ["React.js", "TypeScript", "Web Audio API", "Chakra UI"],
+        "text": "プログラミング教室のウェブサイトを制作。教材管理、予約機能、スマホ対応レスポンシブデザインを実装しました。"
+    },
+    {
+        "title": "ヘルスケア関連WebアプリのUI/UX改善",
+        "image": "/images/4.webp",
+        "link": "https://qiita.com/YushiYamamoto/items/594c4f62220b92d83b92",
+        "tags": ["Nuxt.js", "TypeScript", "REST API", "Node.js", "Express.js"],
+        "text": "ヘルスケア関連のウェブアプリケーションのUI/UX改善を行いました。ユーザーにとって使いやすいインターフェースを設計しました。"
+    },
+    {
+        "title": "Next.jsを活用したブログサイト制作",
+        "image": "/images/nextjs.webp",
+        "link": "https://qiita.com/YushiYamamoto/items/71252a1f6f8aac9bfda2",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Contentful", "GraphQL"],
+        "text": "Next.jsを使用して、静的サイト生成（SSG）を活用したブログサイトを制作。TypeScriptとTailwind CSSを使用し、開発効率を向上。"
+    },
+    {
+        "title": "インタラクティブなアニメーションサイト制作",
+        "image": "/images/animation.webp",
+        "link": "https://codepen.io/yamamotoyushi/pen/LYqbwmx",
+        "tags": ["GSAP", "HTML5", "CSS3", "JavaScript", "ScrollTrigger"],
+        "text": "GSAPを使用してインタラクティブなアニメーションを実装。スクロールに応じてエレメントが動き、ページ全体が動的に変化する体験を提供。"
+    },
+    {
+        "title": "レストラン向けWordPressサイト制作",
+        "image": "/images/restrant.webp",
+        "link": "https://qiita.com/YushiYamamoto/items/80e0dd4862f5fa1a2fe5",
+        "tags": ["WordPress", "PHP", "Booking System", "SEO", "Responsive Design"],
+        "text": "SEOを意識した構造で、検索エンジンからの集客を促進。レスポンシブデザインで、PC・スマートフォンどちらでも快適に操作できるようにしました。"
+    },
+    {
+        "title": "GASとスプレッドシートでの情報管理アプリ開発",
+        "image": "/images/gas.webp",
+        "link": "https://qiita.com/YushiYamamoto/items/dca1a0f535eeab50f028", 
+        "tags": ["Google Apps Script", "Google Sheets", "JavaScript", "API連携", "UI/UX設計"],
+        "text": "Google Apps Script（GAS）とスプレッドシートを活用して、情報管理アプリを開発しました。"
+    }
+]
