@@ -1,74 +1,34 @@
-# ポートフォリオサイト
+# Portfolio Website
 
-このリポジトリは、私のポートフォリオサイトのソースコードを格納しています。
+This is a responsive one page portfolio website which highlights skills, work experience, projects and shares some personal information about the owner (Me👋) of the website.
 
-## 概要
 
-このポートフォリオサイトは、私のフロントエンドエンジニアとしてのスキルと実績を紹介するために作成されました。主にHTML, CSS (SCSS), JavaScript, React, Vue.js, Node.js, Dockerなどを活用して構築されています。
+- Built with Next.js, Typescript, Node.js, Tailwind CSS, Framer Motion
+- Secure contact Form with hcaptcha using the API routes of Next.js
+- Responsive Design, Burger Menu, SEO
 
-## 技術スタック
+## Setup contact form:
+- To use hcaptcha you will need to create a free account:
+https://www.hcaptcha.com
+- create copy of .env_template and rename it to .env in the root directory
+- enter secret and sitekey of your hcaptcha account
+- if you own a domain, use credentials (email, pwd) and SMTP details of the email belonging to the domain
+- enter the email (RECIPIENT) to which the messages should be send (can be a public email like protonmail)
+- Please note: for deployment on vercel you have to enter the env variables in their dashboard
+```
+HCAPTCHA_SECRET=
+NEXT_PUBLIC_HCAPTCHA_SITEKEY=
+NEXT_PUBLIC_SMTP_SERVER=
+NEXT_PUBLIC_SMTP_PORT=
+NEXT_PUBLIC_USER=
+SMTP_PWD=
+NEXT_PUBLIC_RECIPIENT=
+```
 
-*   **フロントエンド:**
-    *   HTML5
-    *   CSS3 (SCSS)
-    *   JavaScript (ES6+)
-    *   React
-    *   Vue.js
-    *   Swiper.js (スライダー)
-*  **バックエンド:**
-    *  Node.js
-*   **その他:**
-    *   Docker
+## Roadmap
+- Internationalisation (I18n)
+- Dynamic project section using the Github API
 
-## セットアップ
 
-1.  リポジトリをクローンします。
-
-    ```bash
-    git clone https://github.com/<Your GitHub user name>/my-portfolio.git
-    cd my-portfolio
-    ```
-
-2.  必要な依存関係をインストールします。
-   (バックエンドがある場合)
-
-    ```bash
-    npm install
-    ```
-
-3.  開発サーバーを起動します。
-
-    ```bash
-     npm run dev
-    ```
-   (バックエンドがある場合)
-  *  または、`index.html` をブラウザで開いて直接確認することも可能です。
-
-4.  SCSSをCSSにコンパイルします。
-   *  VS CodeのLive Sass Compilerなどの拡張機能を利用すると便利です。
-
-## 使い方
-
-*   ポートフォリオサイトは、GitHub Pagesで公開されており、以下のURLでアクセスできます。
-
-   [ここにGitHub PagesのURLを記述]
-
-*   ポートフォリオセクションでは、過去のプロジェクトをスライダー形式で閲覧できます。
-
-*   お問い合わせフォームから、私に連絡を取ることができます。
-
-## 今後の改善点
-
-*   各プロジェクトの詳細ページを追加する
-*  スキルレベルの表示を充実させる
-*   レスポンシブデザインの改善
-*   ブログセクションの追加
-*   多言語対応
-
-## ライセンス
-
-このプロジェクトは [MITライセンス](https://opensource.org/licenses/MIT) のもとで公開されています。
-
-## 連絡先
-
-*   **名前:** 山本　勇志
+## Check it out:
+https://www.fullstacklab.net
