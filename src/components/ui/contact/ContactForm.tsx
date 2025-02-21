@@ -4,7 +4,11 @@
 import React, { useState } from "react";
 import SubmitButton from "./SubmitButton";
 
-// URLエンコード用の関数
+/**
+ * フォームデータをURLエンコード形式に変換するユーティリティ関数
+ * @param data - エンコードするデータオブジェクト
+ * @returns URLエンコードされた文字列
+ */
 const encode = (data: Record<string, string>) => {
   return Object.keys(data)
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -12,43 +16,60 @@ const encode = (data: Record<string, string>) => {
 };
 
 export default function ContactForm() {
+  // フォームの状態管理
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  // ローディング状態（送信中はtrue）
   const [loading, setLoading] = useState(false);
+  // エラーメッセージ格納用
   const [error, setError] = useState("");
+  // 送信成功状態管理
   const [success, setSuccess] = useState(false);
 
+  /**
+   * 入力フィールドの変更を処理するハンドラー
+   * @param e - 入力イベント（input要素またはtextarea要素）
+   */
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value }); // 動的プロパティ名で状態更新
   };
 
+  /**
+   * フォーム送信処理
+   * @param e - フォーム送信イベント
+   */
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
-    setError("");
+    setLoading(true); // ローディング状態開始
+    setError(""); // エラーメッセージリセット
 
-    // Ajax送信用のデータ作成（Netlify が認識するために form-name とハニーポットフィールドも含める）
+    // Netlifyフォーム連携用のデータ構造
+    // - form-name: Netlifyがフォームを識別するための必須フィールド
+    // - bot-field: スパム対策用ハニーポットフィールド
     const formData = {
       "form-name": "contact",
       ...form,
-      "bot-field": ""
+      "bot-field": "" // ハニーポットフィールド（ユーザーからは見えない）
     };
 
     try {
-      // "/" に対して x-www-form-urlencoded 形式で送信
+      // Netlifyのフォーム処理エンドポイントへPOSTリクエスト
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(formData)
+        body: encode(formData) // URLエンコードされたフォームデータ
       });
-      setForm({ name: "", email: "", message: "" });
-      setSuccess(true);
+      
+      // 成功時の処理
+      setForm({ name: "", email: "", message: "" }); // フォーム状態リセット
+      setSuccess(true); // 成功モーダル表示トリガー
     } catch (err) {
-      console.error(err);
-      setError("送信失敗。もう一度お試しください。");
+      console.error("フォーム送信エラー:", err);
+      setError("送信に失敗しました。時間をおいて再度お試しください。");
+    } finally {
+      setLoading(false); // ローディング状態終了（成功/失敗問わず）
     }
-    setLoading(false);
   };
 
   return (
@@ -72,10 +93,17 @@ export default function ContactForm() {
             className="contact__form"
             onSubmit={handleSubmit}
           >
-            {/* Netlify にフォームを認識させるための hidden 入力 */}
-            <input type="hidden" name="form-name" value="contact" />
+            {/* Netlifyフォーム連携用の隠しフィールド */}
+          {/* https://docs.netlify.com/forms/setup/#html-forms */}
+            <input 
+              type="hidden" 
+              name="form-name" 
+              value="contact" 
+              aria-hidden="true" 
+            />
 
-            {/* ハニーポットフィールド（スパム対策） */}
+            {/* スパムボット対策用ハニーポットフィールド */}
+            {/* https://docs.netlify.com/forms/spam-filters/#honeypot-field */}
             <p style={{ display: "none" }}>
               <label>
                 このフィールドは空欄のままにしてください:
@@ -143,7 +171,8 @@ export default function ContactForm() {
               ></textarea>
             </div>
 
-            <SubmitButton loading={loading} />
+            {/* 送信ボタンコンポーネント（ローディング状態を伝達） */}
+          <SubmitButton loading={loading} />
             {error && (
               <div className="text-xl flex justify-center items-center h-16">
                 {error}
@@ -153,7 +182,7 @@ export default function ContactForm() {
         </div>
       </section>
 
-      {/* 送信成功時のポップアップ */}
+      {/* 送信成功モーダルダイアログ */}
       {success && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded shadow-lg text-center">
@@ -174,4 +203,3 @@ export default function ContactForm() {
     </>
   );
 }
-
